@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "electron": "electron .",
-    "electron-build": "ng build --prod && electron ."
+    "electron-build": "ng build --prod && electron .",
+    "electron-package": "ng build --prod && electron-packager . --platform=win32 --ignore=\"\/(node_modules|e2e|src)\" --ignore=\"\/*.(md|editorconfig|gitignore)\" --ignore=\"(angular|tsconfig|tslint).json\" --overwrite"
   },
   "private": true,
   "dependencies": {
@@ -37,6 +38,7 @@
     "@types/node": "~8.9.4",
     "codelyzer": "~4.2.1",
     "electron": "^2.0.9",
+    "electron-packager": "^12.1.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "^3.0.0",
